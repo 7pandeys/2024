@@ -6,7 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: python --version
-      - run: poetry --version
+      - run: curl -sSL https://install.python-poetry.org | python3 -
+      - run: pwd
+      - run: ls
+      - run: poetry install
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
