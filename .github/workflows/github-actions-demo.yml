@@ -9,7 +9,8 @@ jobs:
       - run: curl -sSL https://install.python-poetry.org | python3 -
       - run: pwd
       - run: ls
-      - run: Basic/Basic_Of_Python
+      - run: cp /home/runner/work/2024/2024/Basic/Basic_Of_Python/poetry.lock .
+      - run: cp /home/runner/work/2024/2024/Basic/Basic_Of_Python/pyproject.toml .
       - run: poetry install
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
