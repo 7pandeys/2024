@@ -10,7 +10,7 @@ jobs:
       - run: pwd
       - run: ls -ltr
       - run: pwd
-      - run: cp -rf * .
+      - run: cp -rf . .
       - run: ls -ltr
 #      - run: cp /home/runner/work/2024/2024/Basic/Basic_Of_Python/pyproject.toml .
       - run: poetry install
