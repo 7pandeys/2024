@@ -1,5 +1,5 @@
 import pytest
-from basic_of_python.prime_numbers import prime_numbers
+from src.prime_numbers import prime_numbers
 
 def test_prime_number():
     assert prime_numbers(11) == "11 is Prime Number"
