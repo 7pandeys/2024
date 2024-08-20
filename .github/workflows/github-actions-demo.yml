@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: python --version
       - run: curl -sSL https://install.python-poetry.org | python3 -
-      - run: cd ${{ github.workspace }}/Basic/Basic_Of_Python
+#      - run: cd ${{ github.workspace }}/Basic/Basic_Of_Python
       - run: poetry install
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
@@ -19,4 +19,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+          cd ${{ github.workspace }}
+          cd Basic
       - run: echo "🍏 This job's status is ${{ job.status }}."
