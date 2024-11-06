@@ -18,14 +18,13 @@ def generate_fibonacci_sequence(limit: int) -> List[int]:
     """
     if limit < 2:
         logger.error("The limit must be at least 2 to generate a valid Fibonacci sequence.")
-        raise ValueError("The limit must be at least 2 to generate a valid Fibonacci sequence.")
+        # raise ValueError("The limit must be at least 2 to generate a valid Fibonacci sequence.")
 
     logger.info("Generating Fibonacci sequence for limit: %d", limit)
 
     # Initialize the first two Fibonacci numbers
     first, second = 0, 1
     sequence = [first, second]
-
     # Generate the Fibonacci sequence up to the specified limit
     for _ in range(2, limit):
         next_value = first + second
@@ -33,14 +32,14 @@ def generate_fibonacci_sequence(limit: int) -> List[int]:
         logger.debug("Generated next Fibonacci number: %d", next_value)
         first, second = second, next_value
 
-
     logger.info("Fibonacci sequence generated: %s", sequence)
     return sequence
 
 
 if __name__ == "__main__":
+
     try:
-        print(generate_fibonacci_sequence(1)) # Output: [0, 1, 1, 2, 3]
+        generate_fibonacci_sequence(2)  # Output: [0, 1, 1, 2, 3]
+        generate_fibonacci_sequence(-2)
     except ValueError as e:
         logger.exception("Exception occurred: %s", e)
-
